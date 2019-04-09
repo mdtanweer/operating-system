@@ -10,8 +10,12 @@ Write a C program to calulate average waiting time using shortest-remaining -tim
 
 Solution of question no 37:-----------
 
-#include<stdio.h>
 
+
+
+
+
+#include<stdio.h>
 int main()
 {
 	int at[10],bst[10],temp[10],wt[10],tat[10],ct[10];
