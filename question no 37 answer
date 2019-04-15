@@ -1,0 +1,25 @@
+Solution of question no 37:-----------
+
+#include<stdio.h>
+
+int main()
+{
+	int at[10],bst[10],temp[10],wt[10],tat[10],ct[10];
+	int i,j,n,smallest,count=0,t;
+	float avgwt=0,avgtat=0;
+	
+	printf("enter the no of process ");
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++)
+	{
+		printf("\nenter the details of process P%d\n",i+1);
+		printf("arival time ");
+		scanf("%d",&at[i]);
+		printf("brust time ");
+		scanf("%d",&bst[i]);
+		temp[i]=bst[i];
+	}
+	
+	bst[9]=1000;
+}
