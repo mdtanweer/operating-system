@@ -1,0 +1,47 @@
+		if(bt[i]<0||at[i]<0||que[i]<1||que[i]>2)  //checking conditions;
+		{
+			printf("!!!!!Invalid process entry/entries\n Enter this process data again\n");
+			i--;
+		}
+		else
+		{
+		rem[i]=bt[i];
+		}	
+	}
+	printf("enter the time quantam\n");
+	scanf("%d",&tq);\
+	for(int i=0;i<n;i++) //shorting acording to their arival time;
+	{
+        for (int j = i + 1; j < n; ++j)
+        {
+        	if (at[i]>at[j]) 
+            {
+                    temp =  pid[i];
+                    pid[i] = pid[j];
+                    pid[j] = temp;
+                    
+                    temp=at[i];
+                    at[i]=at[j];
+                    at[j]=temp;
+                    
+                    temp=bt[i];
+                    bt[i]=bt[j];
+                    bt[j]=temp;
+                    
+                    temp=que[i];
+                    que[i]=que[j];
+                    que[j]=temp;
+            }
+        }
+	}
+	for(i=0;i<n;i++)// total burst time;
+	tbt+=bt[i];
+	
+	min_at=at[0]; //min arival time;
+	for (int i = 1; i < n; i++)
+    {
+        if (at[i]< min_at)
+        {
+           min_at = at[i];
+        }
+    }
