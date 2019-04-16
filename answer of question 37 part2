@@ -1,0 +1,19 @@
+	for(t=0;count!=n;t++)
+	{
+		smallest=9;
+		for(j=0;j<n;j++)
+		{
+			if(at[j]<=t && bst[j]<bst[smallest] && bst[j]>0)
+			{
+				smallest=j;
+			}
+		}
+		bst[smallest]--;
+		if(bst[smallest] == 0)
+  		{
+   			count++;
+   			ct[smallest]=t+1;
+   			tat[smallest]=ct[smallest]-at[smallest];
+   			wt[smallest]=tat[smallest]-temp[smallest];
+  		}
+ 	}
