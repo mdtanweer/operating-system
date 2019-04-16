@@ -1,0 +1,40 @@
+int RQ1[n],RQ2[n],k1=-1,k2=-1,index=0,remx;
+	
+	for(i=0;i<min_at+tbt;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			if(at[j]==i&&que[j]==1) //SRTF
+			{
+				k1++;
+				RQ1[k1]=j;
+			}
+			else if(at[j]==i&&que[j]==2) //Round Robin
+			{
+				k2++;
+				RQ2[k2]=j;
+			}
+		}
+		if(k1<0&&k2<0)
+		{
+		continue;
+		}
+		else if(k1>=0) // SRTF
+		{	
+		    if(t==1)
+		    flag=1;
+			t=0;
+			//finding process with minimum remaining burst time
+			if(i==min_at)
+			{
+		       int min = rem[RQ1[0]];
+		   	   index = 0;
+		    }
+		    for (int z = 1; z < k1; z++)
+		    {
+		        if (rem[RQ1[z]] < min)
+		        {
+		           min = rem[RQ1[z]];
+				index = z;
+		        }
+		    }
